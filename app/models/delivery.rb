@@ -5,7 +5,7 @@
 #  id                    :integer          not null, primary key
 #  description           :string
 #  details               :string
-#  status                :string
+#  status                :string           default("waiting")
 #  supposed_arrival_date :date
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null

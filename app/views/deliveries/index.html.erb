@@ -1,8 +1,9 @@
 <div>
   <div>
     <h1>
-      List of all deliveries
+      Delivery Tracker
     </h1>
+    <p>Know if something gets lost in the mail</p>
   </div>
 </div>
 
@@ -11,18 +12,10 @@
 <div>
   <div>
     <h2>
-      Add a new delivery
+      Expecting a package?
     </h2>
 
     <form action="/insert_delivery" method="post">
-      <div>
-        <label for="user_id_box">
-          User
-        </label>
-
-        <input type="text" id="user_id_box" name="query_user_id">
-      </div>
-
       <div>
         <label for="description_box">
           Description
@@ -35,7 +28,7 @@
         <label for="supposed_arrival_date_box">
           Supposed arrival date
         </label>
-
+  
         <input type="date" id="supposed_arrival_date_box" name="query_supposed_arrival_date">
       </div>
 
@@ -43,16 +36,7 @@
         <label for="details_box">
           Details
         </label>
-
-        <input type="text" id="details_box" name="query_details">
-      </div>
-
-      <div>
-        <label for="status_box">
-          Status
-        </label>
-
-        <input type="text" id="status_box" name="query_status">
+        <textarea name="query_details" id="details_box" rows="3"></textarea>
       </div>
 
       <button>
