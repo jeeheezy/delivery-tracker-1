@@ -12,5 +12,7 @@
 #  user_id               :integer
 #
 class Delivery < ApplicationRecord
+  validates(:description, presence:true)
+  validates(:supposed_arrival_date, presence: true)
   belongs_to(:user)
 end
