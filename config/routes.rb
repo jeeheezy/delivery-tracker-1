@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # Routes for the Delivery resource:
 
   # CREATE
@@ -22,4 +23,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root "deliveries#index"
 end
