@@ -55,7 +55,11 @@
   <% waiting_deliveries.each do |delivery| %>
     <li>
       <div><%= delivery.description %></div>
+      <% if delivery.supposed_arrival_date + 3 < Date.today %>
+      <div style="color:red;">Supposed to arrive on <%= delivery.supposed_arrival_date %></div>
+      <% else %>
       <div>Supposed to arrive on <%= delivery.supposed_arrival_date %></div>
+      <% end %>
       <div><%= delivery.details %></div>
       <div>
         <form action="/modify_delivery/<%= delivery.id %>" method="post">
@@ -77,8 +81,10 @@
     <li>
       <div><%= delivery.description %></div>
       <div>
-        Updated <%= time_ago_in_words(delivery.updated_at) %> ago
-        <a href="/delete_delivery/<%= delivery.id %>">Delete</a>
+        <small>
+          Updated <%= time_ago_in_words(delivery.updated_at) %> ago
+          <a href="/delete_delivery/<%= delivery.id %>">Delete</a>
+        </small>
       </div>
     </li>
   <% end %>

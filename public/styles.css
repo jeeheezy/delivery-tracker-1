@@ -1,0 +1,11 @@
+.waiting_on {
+  background-color: lightgoldenrodyellow;
+}
+
+.waiting_on > ul > li {
+  margin-bottom: 1rem;
+}
+
+.received {
+  background-color: lightgreen;
+}
